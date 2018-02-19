@@ -1,0 +1,13 @@
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\GatekeeperBot.exe.config
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\GatekeeperBot.exe
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\GatekeeperBot.pdb
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\DSharpPlus.CommandsNext.dll
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\DSharpPlus.dll
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\DSharpPlus.xml
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\DSharpPlus.CommandsNext.xml
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Debug\GatekeeperBot.csprojResolveAssemblyReference.cache
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Debug\GatekeeperBot.csproj.CoreCompileInputs.cache
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Debug\GatekeeperBot.exe
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Debug\GatekeeperBot.pdb
