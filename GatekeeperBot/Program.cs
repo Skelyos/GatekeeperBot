@@ -75,9 +75,12 @@ namespace GatekeeperBot
                                     string line1;
                                     while ((line1 = sr1.ReadLine()) != null)
                                     {
-                                        if (e.Message.Content.ToLower().Contains(line1))
+                                        if(line1 != "")
                                         {
-                                            await e.Message.DeleteAsync("Violated blacklist");
+                                            if (e.Message.Content.ToLower().Contains(line1.ToLower()))
+                                            {
+                                                await e.Message.DeleteAsync("Violated blacklist");
+                                            }
                                         }
                                     }
                                 }

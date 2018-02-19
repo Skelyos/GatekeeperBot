@@ -86,7 +86,7 @@ namespace GatekeeperBot
             [Aliases("addtoblacklist", "blacklist", "Blacklist", "BlackList")]
             public async Task AddToBlacklist(CommandContext ctx)
             {
-                using (StreamWriter file = new StreamWriter(BlacklistedGuild, true))
+                using (StreamWriter file = new StreamWriter(BlacklistedGuild + ".txt", true))
                 {
                     file.WriteLine(ctx.Guild.Id + "," + ctx.Guild.Name);
                 }
