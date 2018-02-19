@@ -26,7 +26,7 @@ namespace GatekeeperBot
             public void UserUpdate(CommandContext f, string remove)
             {
                 List<String> lines = new List<String>();
-                using (StreamReader reader = new StreamReader(Blacklist + "-" + f.Guild.Id))
+                using (StreamReader reader = new StreamReader(Blacklist + "-" + f.Guild.Id + ".txt"))
                 {
                     String line;
 
@@ -40,7 +40,7 @@ namespace GatekeeperBot
                     }
                 }
 
-                using (StreamWriter writer = new StreamWriter(Blacklist + "-" + f.Guild.Id, false))
+                using (StreamWriter writer = new StreamWriter(Blacklist + "-" + f.Guild.Id + ".txt", false))
                 {
                     foreach (String line in lines)
                         writer.WriteLine(line);
@@ -51,7 +51,7 @@ namespace GatekeeperBot
             [Aliases("addWord", "add", "Add", "Word", "word")]
             public async Task AddWord(CommandContext ctx, string BlackListedWord)
             {
-                using (StreamWriter file = new StreamWriter(Blacklist + "-" + ctx.Guild.Id, true))
+                using (StreamWriter file = new StreamWriter(Blacklist + "-" + ctx.Guild.Id + ".txt", true))
                 {
                     file.WriteLine(BlackListedWord);
                 }
@@ -71,7 +71,7 @@ namespace GatekeeperBot
             public async Task ViewWords(CommandContext ctx)
             {
                 string SingleLineRow = "";
-                using (StreamReader sr = new StreamReader(Blacklist + "-" + ctx.Guild.Id))
+                using (StreamReader sr = new StreamReader(Blacklist + "-" + ctx.Guild.Id + ".txt"))
                 {
                     string line;
                     while ((line = sr.ReadLine()) != null)
