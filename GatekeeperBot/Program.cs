@@ -70,7 +70,7 @@ namespace GatekeeperBot
                         {
                             try
                             {
-                                using (StreamReader sr1 = new StreamReader(Blacklist + "-" + e.Guild.Id))
+                                using (StreamReader sr1 = new StreamReader(Blacklist + "-" + e.Guild.Id + ".txt"))
                                 {
                                     string line1;
                                     while ((line1 = sr1.ReadLine()) != null)
