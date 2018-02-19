@@ -48,17 +48,16 @@ namespace GatekeeperBot
             this.Client.ClientErrored += this.Client_ClientError;
 
             //Set command prefix
-            Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", "Setting command prefix", DateTime.Now);
+            Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", "Setting command prefix", DateTime.Now);
             var cfg = new CommandsNextConfiguration
             {
-                StringPrefix = "?!",
+                StringPrefix = "//",
                 CaseSensitive = false,
-                EnableDefaultHelp = false,
                 EnableDms = false
             };
 
             // Checks if your guild is on the blacklist and if the message contains a word on the blacklist
-            Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", "Starting listener for blacklisted words", DateTime.Now);
+            Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", "Starting listener for blacklisted words", DateTime.Now);
             Client.MessageCreated += async e =>
             {
                 using (StreamReader sr = new StreamReader(BlacklistedGuild))
@@ -95,11 +94,11 @@ namespace GatekeeperBot
             this.Commands.CommandErrored += this.Commands_CommandErrored;
 
             //Enables all commmands
-            Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", "Enabling commmands", DateTime.Now);
+            Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", "Enabling commmands", DateTime.Now);
             Commands.RegisterCommands<MyCommands>();
 
             //Connect the bot
-            Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", "Connecting...", DateTime.Now);
+            Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", "Connecting...", DateTime.Now);
             await Client.ConnectAsync();
 
             //Delay the bot
@@ -109,7 +108,7 @@ namespace GatekeeperBot
         private Task Client_Ready(ReadyEventArgs e)
         {
             // let's log the fact that this event occured
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", "Client is ready to process events.", DateTime.Now);
+            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", "Client is ready to process events.", DateTime.Now);
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -120,7 +119,7 @@ namespace GatekeeperBot
         private Task SetStatus(ReadyEventArgs e)
         {
             DiscordGame discordGame = new DiscordGame("Gatekeeping");
-            Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", "Setting user status", DateTime.Now);
+            Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", "Setting user status", DateTime.Now);
             Client.UpdateStatusAsync(discordGame, UserStatus.Online, DateTimeOffset.UtcNow);
 
             return Task.CompletedTask;
@@ -130,7 +129,7 @@ namespace GatekeeperBot
         {
             // let's log the name of the guild that was just
             // sent to our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", $"Guild available: {e.Guild.Name}", DateTime.Now);
+            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", $"Guild available: {e.Guild.Name}", DateTime.Now);
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -142,7 +141,7 @@ namespace GatekeeperBot
         {
             // let's log the name of the guild that was just
             // sent to our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", $"Joined guild: {e.Guild.Name}", DateTime.Now);
+            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", $"Joined guild: {e.Guild.Name}", DateTime.Now);
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -154,7 +153,7 @@ namespace GatekeeperBot
         {
             // let's log the name of the guild that was just
             // sent to our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Yuno Bot", $"Removed from guild: {e.Guild.Name}", DateTime.Now);
+            e.Client.DebugLogger.LogMessage(LogLevel.Info, "Gatekeeper", $"Removed from guild: {e.Guild.Name}", DateTime.Now);
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -166,7 +165,7 @@ namespace GatekeeperBot
         {
             // let's log the details of the error that just 
             // occured in our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Error, "Yuno Bot", $"Exception occured: {e.Exception.GetType()}: {e.Exception.Message}", DateTime.Now);
+            e.Client.DebugLogger.LogMessage(LogLevel.Error, "Gatekeeper", $"Exception occured: {e.Exception.GetType()}: {e.Exception.Message}", DateTime.Now);
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -177,7 +176,7 @@ namespace GatekeeperBot
         private Task Commands_CommandExecuted(CommandExecutionEventArgs e)
         {
             // let's log the name of the command and user
-            e.Context.Client.DebugLogger.LogMessage(LogLevel.Debug, "Yuno Bot", $"{e.Context.User.Username} successfully executed '{e.Command.QualifiedName}'", DateTime.Now);
+            e.Context.Client.DebugLogger.LogMessage(LogLevel.Debug, "Gatekeeper", $"{e.Context.User.Username} successfully executed '{e.Command.QualifiedName}'", DateTime.Now);
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -189,7 +188,7 @@ namespace GatekeeperBot
         {
             Console.WriteLine();
             // let's log the error details
-            e.Context.Client.DebugLogger.LogMessage(LogLevel.Error, "Yuno Bot", $"{e.Context.User.Username} tried executing '{e.Command?.QualifiedName ?? "<unknown command>"}' but it errored: {e.Exception.GetType()}: {e.Exception.Message ?? "<no message>"}", DateTime.Now);
+            e.Context.Client.DebugLogger.LogMessage(LogLevel.Error, "Gatekeeper", $"{e.Context.User.Username} tried executing '{e.Command?.QualifiedName ?? "<unknown command>"}' but it errored: {e.Exception.GetType()}: {e.Exception.Message ?? "<no message>"}", DateTime.Now);
 
             // let's check if the error is a result of lack
             // of required permissions
