@@ -7,7 +7,6 @@ C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Release\Newt
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Release\DSharpPlus.xml
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Release\DSharpPlus.CommandsNext.xml
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Release\Newtonsoft.Json.xml
-C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.csprojResolveAssemblyReference.cache
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.csproj.CoreCompileInputs.cache
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.exe
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.pdb
