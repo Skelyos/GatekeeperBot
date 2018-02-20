@@ -10,3 +10,4 @@ C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\bin\Release\Newt
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.csproj.CoreCompileInputs.cache
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.exe
 C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.pdb
+C:\Users\pat12\Documents\Repository\GatekeeperBot\GatekeeperBot\obj\Release\GatekeeperBot.csprojResolveAssemblyReference.cache

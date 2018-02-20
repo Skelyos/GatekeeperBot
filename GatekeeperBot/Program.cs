@@ -75,7 +75,7 @@ namespace GatekeeperBot
                                     string line1;
                                     while ((line1 = sr1.ReadLine()) != null)
                                     {
-                                        if(line1 != "")
+                                        if (line1 != "")
                                         {
                                             if (e.Message.Content.ToLower().Contains(line1.ToLower()))
                                             {
